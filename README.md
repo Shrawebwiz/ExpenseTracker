@@ -17,9 +17,9 @@ A **Java Swing-based Expense Tracker** that helps you track your daily expenses,
 
 ## 🛠️ Tech Stack
 
-- **Java 21 (or above)**
+- **Java 17 (or above)**
 - **Swing (javax.swing)**
-- File-based persistence (`budget.txt` for budget tracking)
+- File-based persistence (`budget.txt` and `expense.txt` for tracking)
 
 ---
 
