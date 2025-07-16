@@ -2,20 +2,17 @@ package ExpenseTracker;
 
 import java.io.Serializable;
 
-/**
- * Expense class representing a single expense entry.
- * Uses Serializable if you want to add object-based file saving later.
- */
+
 public class Expense implements Serializable {
-    private static int counter = 1; // Auto-increment ID across objects
+    private static int counter = 1; 
 
     private int id;
     private String date;         // Format: "YYYY-MM-DD"
     private double amount;
-    private String category;     // Food, Travel, Shopping, etc.
+    private String category;     
     private String description;
 
-    // Constructor
+ 
     public Expense(String date, double amount, String category, String description) {
         this.id = counter++;
         this.date = date;
@@ -24,7 +21,7 @@ public class Expense implements Serializable {
         this.description = description;
     }
 
-    // Constructor with ID (used when loading from file)
+  
     public Expense(int id, String date, double amount, String category, String description) {
         this.id = id;
         this.date = date;
@@ -33,7 +30,7 @@ public class Expense implements Serializable {
         this.description = description;
     }
 
-    // Getters
+
     public int getId() {
         return id;
     }
@@ -54,7 +51,7 @@ public class Expense implements Serializable {
         return description;
     }
 
-    // Setters (used for editing expenses)
+
     public void setDate(String date) {
         this.date = date;
     }
@@ -71,10 +68,7 @@ public class Expense implements Serializable {
         this.description = description;
     }
 
-    /**
-     * Returns a CSV-friendly string for file saving:
-     * id,date,amount,category,description
-     */
+   
     public String toCSV() {
         return id + "," + date + "," + amount + "," + category + "," + description;
     }
